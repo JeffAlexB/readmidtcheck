@@ -1,6 +1,10 @@
 # 30-Day Hospital Readmission Risk Prediction App
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/JeffAlexB/readmidtcheck/HEAD?urlpath=voila/render/app/notebook_interface.ipynb&fresh=true)
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/JeffAlexB/readmidtcheck/main?urlpath=%2Fdoc%2Ftree%2Fvoila%2Frender%2Fapp%2Fnotebook_interface.ipynb)
+## Intended Audience
+This tool is designed for clinicians, case managers, or hospital staff who need a fast, interpretable way to identify patients at higher risk of 30-day hospital readmission and prioritize follow-up care.
+
+---
 ## Project Overview
 This interactive machine learning application predicts the likelihood of a patient being readmitted to the hospital within 30 days. It uses a trained Random Forest model calibrated on synthetic healthcare data to provide:
 
@@ -8,6 +12,18 @@ This interactive machine learning application predicts the likelihood of a patie
 - A corresponding **risk tier** (Low, Medium, High)
 
 The interface was built using Jupyter Notebook and `ipywidgets`, and is designed for ease-of-use by clinicians or hospital staff.
+
+## Table of Contents
+- [Purpose](#purpose)
+- [Features](#features)
+- [Visualizations](#visualizations)
+- [Technologies Used](#technologies-used)
+- [How to Run](#how-to-run-locally)
+- [Troubleshooting Notes](#troubleshooting-notes)
+- [Evaluation Summary](#evaluation-summary)
+- [Limitations](#limitations)
+- [Future Improvements](#future-improvements)
+- [License](#license)
 
 ---
 
@@ -28,19 +44,22 @@ Hospital readmissions are costly and often preventable. This tool provides a **d
 ---
 
 ## Visualizations
+Below are examples of the model evaluation charts produced by the application. These visualizations help explain the model's behavior and effectiveness to users.
 
-### 1. Boxplot of Predicted Risk Score by Actual Readmission
-![Boxplot Placeholder](https://via.placeholder.com/500x250?text=Boxplot+Risk+vs+Outcome)
-- **What it shows**: Distribution of risk scores for patients grouped by true readmission outcome (0 = No, 1 = Yes).
-- **Why it matters**: Helps understand model calibration and how scores separate between groups.
-
-### 2. ROC Curve (Optional)
-![ROC Curve Placeholder](https://via.placeholder.com/500x250?text=ROC+AUC+Curve)
+### 1. ROC Curve
+![ROC Curve Placeholder](https://github.com/JeffAlexB/readmidtcheck/blob/main/kaggle/visualizations/ROC_curve.png)
 - **What it shows**: Trade-off between sensitivity and specificity across thresholds.
 - **Why it matters**: Provides a single score (AUC) to evaluate classifier performance.
-
-### 3. Risk Tier Breakdown Heatmap
-![Risk Tiers Placeholder](https://via.placeholder.com/500x250?text=Risk+Tier+Breakdown)
+### 2. Feature Importance (Permutation)
+![Feature Importance Placeholder](https://github.com/JeffAlexB/readmidtcheck/blob/main/kaggle/visualizations/prem_features.png)
+- **What it shows**: Highlights which patient features (e.g., age, diagnosis, hospital stay length) had the strongest impact on the model’s predictions.
+- **Why it matters**: Helps clinicians understand what factors drive readmission risk, supporting model transparency and potential clinical action.
+### 3. Boxplot of Predicted Risk Score by Actual Readmission
+![Boxplot Placeholder](https://github.com/JeffAlexB/readmidtcheck/blob/main/kaggle/visualizations/risk_score.png)
+- **What it shows**: Distribution of risk scores for patients grouped by true readmission outcome (0 = No, 1 = Yes).
+- **Why it matters**: Helps understand model calibration and how scores separate between groups.
+### 4. Risk Tier Breakdown Heatmap
+![Risk Tiers Placeholder](https://github.com/JeffAlexB/readmidtcheck/blob/main/kaggle/visualizations/risktier_heatmap.png)
 - **What it shows**: Percentage of true readmissions within each assigned tier.
 - **Why it matters**: Indicates how well the model isolates high-risk patients.
 
@@ -69,7 +88,12 @@ Hospital readmissions are costly and often preventable. This tool provides a **d
 4. Launch Jupyter Notebook and run `app/notebook_interface.ipynb`
 
 OR launch directly using Binder:  
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/JeffAlexB/readmidtcheck/main?urlpath=%2Fdoc%2Ftree%2Fvoila%2Frender%2Fapp%2Fnotebook_interface.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/JeffAlexB/readmidtcheck/HEAD?urlpath=voila/render/app/notebook_interface.ipynb&fresh=true)
+
+### UI and Styling
+The final application uses Voilà for deployment with optional use of the Vuetify template, providing a clean, responsive web-app appearance suitable for clinical settings.
+
+
 ---
 
 ## Troubleshooting Notes
