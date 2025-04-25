@@ -1,7 +1,6 @@
 # 30-Day Hospital Readmission Risk Prediction App
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/your-username/readmission-risk-app/HEAD?urlpath=voila%2Frender%2Fapp%2Fnotebook_interface.ipynb)
-
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/JeffAlexB/readmidtcheck/main?urlpath=%2Fdoc%2Ftree%2Fvoila%2Frender%2Fapp%2Fnotebook_interface.ipynb)
 ## Project Overview
 This interactive machine learning application predicts the likelihood of a patient being readmitted to the hospital within 30 days. It uses a trained Random Forest model calibrated on synthetic healthcare data to provide:
 
@@ -53,9 +52,8 @@ Hospital readmissions are costly and often preventable. This tool provides a **d
    ```
 4. Launch Jupyter Notebook and run app/notebook_interface.ipynb 
 
-OR launch directly using Binder:
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/your-username/readmission-risk-app/HEAD?urlpath=voila%2Frender%2Fapp%2Fnotebook_interface.ipynb)
-
+OR launch directly using Binder: 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/JeffAlexB/readmidtcheck/main?urlpath=%2Fdoc%2Ftree%2Fvoila%2Frender%2Fapp%2Fnotebook_interface.ipynb)
 ---
 
 ## License
