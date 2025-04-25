@@ -105,12 +105,14 @@ The final application uses Voilà for deployment with optional use of the Vuetif
 
 ---
 
-## Evaluation Summary
+## Evaluation Summary (Post-Tuning)
 
-- ROC AUC: ~0.70–0.88
-- High tier readmission rate: ~28.6%
-- Model tested against synthetic edge cases
-- Visual and interactive feedback for predictions
+- Final ROC AUC (Validation): ~0.88
+- Final Model: Tuned Random Forest Classifier
+- Precision / Recall (balanced): ~0.81
+- High tier readmission rate: (To be updated after risk tier generation)
+- Visualizations based on tuned model results
+
 
 ---
 
