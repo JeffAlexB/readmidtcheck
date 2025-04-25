@@ -6,3 +6,4 @@ scikit-learn
 ipywidgets
 voila
 joblib
+IPython
