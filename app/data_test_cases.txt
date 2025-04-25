@@ -1,0 +1,17 @@
+# Insert into notebook to test any odd or outlier behavior
+# Generate test cases for model
+print("\n=== Synthetic Test Cases ===")
+test_cases = pd.DataFrame([
+    {'age': 30, 'gender': 'Male', 'primary_diagnosis': 'COPD', 'num_procedures': 0, 'days_in_hospital': 1, 'comorbidity_score': 0, 'discharge_to': 'Home'}, # low risk
+    {'age': 85, 'gender': 'Female', 'primary_diagnosis': 'Diabetes', 'num_procedures': 5, 'days_in_hospital': 10, 'comorbidity_score': 4, 'discharge_to': 'Skilled Nursing Facility'}, # high risk
+    {'age': 65, 'gender': 'Male', 'primary_diagnosis': 'Heart Disease', 'num_procedures': 0, 'days_in_hospital': 1, 'comorbidity_score': 0, 'discharge_to': 'Home'}, # medium risk
+    {'age': 70, 'gender': 'Female', 'primary_diagnosis': 'Kidney Disease', 'num_procedures': 3, 'days_in_hospital': 7, 'comorbidity_score': 2, 'discharge_to': 'Rehabilitation Facility'}, # medium risk
+    {'age': 40, 'gender': 'Male', 'primary_diagnosis': 'Heart Disease', 'num_procedures': 1, 'days_in_hospital': 2, 'comorbidity_score': 1, 'discharge_to': 'Home Health Care'}, # low risk
+])
+
+processed_cases = preprocess_features(test_cases)
+test_scores = model.predict_proba(processed_cases)[:, 1]
+
+for i, score in enumerate(test_scores):
+    tier = "High" if score > 0.85 else "Medium" if score > 0.5 else "Low"
+    print(f"Case {i+1} → Score: {score:.2f}, Tier: {tier}, Profile: {test_cases.iloc[i].to_dict()}")
