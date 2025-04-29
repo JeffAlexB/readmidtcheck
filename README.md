@@ -1,5 +1,5 @@
 # 30-Day Hospital Readmission Risk Prediction App
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/JeffAlexB/readmidtcheck/HEAD?urlpath=voila/render/app/notebook_interface.ipynb&fresh=true)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/JeffAlexB/readmidtcheck/HEAD?urlpath=voila/render/app/notebook_interface.ipynb?template=material&fresh=true)
 
 ## Intended Audience
 This tool is designed for clinicians, case managers, or hospital staff who need a fast, interpretable way to identify patients at higher risk of 30-day hospital readmission and prioritize follow-up care.
@@ -51,7 +51,7 @@ Below are examples of the model evaluation charts produced by the application. T
 - **What it shows**: Trade-off between sensitivity and specificity across thresholds.
 - **Why it matters**: Provides a single score (AUC) to evaluate classifier performance.
 ### 2. Feature Importance (Permutation)
-![Feature Importance Placeholder](https://github.com/JeffAlexB/readmidtcheck/blob/main/kaggle/visualizations/prem_features.png)
+![Feature Importance Placeholder](https://github.com/JeffAlexB/readmidtcheck/blob/main/kaggle/visualizations/feature_importance.png)
 - **What it shows**: Highlights which patient features (e.g., age, diagnosis, hospital stay length) had the strongest impact on the model’s predictions.
 - **Why it matters**: Helps clinicians understand what factors drive readmission risk, supporting model transparency and potential clinical action.
 ### 3. Boxplot of Predicted Risk Score by Actual Readmission
@@ -88,7 +88,7 @@ Below are examples of the model evaluation charts produced by the application. T
 4. Launch Jupyter Notebook and run `app/notebook_interface.ipynb`
 
 OR launch directly using Binder:  
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/JeffAlexB/readmidtcheck/HEAD?urlpath=voila/render/app/notebook_interface.ipynb&fresh=true)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/JeffAlexB/readmidtcheck/HEAD?urlpath=voila/render/app/notebook_interface.ipynb?template=material&fresh=true)
 
 ### UI and Styling
 The final application uses Voilà for deployment with optional use of the Vuetify template, providing a clean, responsive web-app appearance suitable for clinical settings.
